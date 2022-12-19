@@ -4,13 +4,50 @@
     align-items: center;
 }
 
-.navigation__logo {
+.navigation__logo a{
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 2.25rem;
     line-height: 2.625rem;
+    color: black
 }
 
 .navigation__link {
     padding-left: 8rem;
+}
+
+.navigation__link a{
+    padding: 0 1.5rem;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    color: #050038;
+}
+
+.navigation__link a:active, a:hover, a:visited, a:active {
+    text-decoration: none;
+}
+
+.navigation__link a:hover {
+    color: #110495;
+}
+
+.navigation-button__signIn {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.3125rem;
+    color: #050038;
+    background: #fff;
+    border-color: #fff;
+}
+
+.navigation-button__tryForFree {
+    padding: .7rem 1.7rem;
+    margin-left: 1rem;
+    font-family: 'Inter';
+    font-weight: 500;
+    color: #fff;
+    background:#0555FF;
 }

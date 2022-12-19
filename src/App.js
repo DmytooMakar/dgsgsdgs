@@ -1,46 +1,38 @@
-import './App.css';
 import React from 'react';
 import Docs from './components/Docs';
 import Freatures from './components/Freatures';
 import Tools from './components/Tools';
 import Pricing from './components/Pricing';
 import Jobs from './components/Jobs';
+import Home from './components/Home';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import { Nav, Navbar, Button } from 'react-bootstrap';
+import { Nav, Button } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-
-
+import './App.css';
 
 function App() {
   return (<> 
     <Router>
-        <Navbar className='navigation nav'>
-          <span className='navigation__logo'><h3>HelloUI</h3></span>
-          <Nav className='navigation__link'>
-            <Nav.Link>
-              <Link to="/docs">Docs</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/tools">Tools</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/freatures">Freatures</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/pricing">Pricing</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/jobs">Jobs</Link>
-            </Nav.Link>
-          </Nav>
-          <Button className="navigation-button__signIn btn badge-pill badge-light">Sign In</Button>
-          <Button className="navigation-button__tryForFree btn badge-pill badge-primary">Try for Free</Button>
-        </Navbar>
+        <Nav className='navigation nav'>
+          <span className='navigation__logo'><Link to="/Home">HelloUI</Link></span>
+          <div className='navigation__link'>
+            <Link to="/docs">Docs</Link>                       
+            <Link to="/tools">Tools</Link>                        
+            <Link to="/freatures">Freatures</Link>                        
+            <Link to="/pricing">Pricing</Link>           
+            <Link to="/jobs">Jobs</Link>           
+          </div>
+          <div>
+            <Button className='navigation-button__signIn  badge-pill badge-light'>Sign In</Button>
+            <Button className='navigation-button__tryForFree  badge-pill badge-primary'>Try for Free</Button>
+          </div>
+        </Nav>
+
       <Switch>
         <Route exact path="/docs">
           <Docs />
@@ -56,6 +48,9 @@ function App() {
         </Route>
         <Route path="/jobs">
           <Jobs />
+        </Route>
+        <Route path="/home">
+          <Home />
         </Route>
       </Switch>
     </Router>
